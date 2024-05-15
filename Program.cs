@@ -50,7 +50,15 @@
 		}
 		static void Lab4Method()
 		{
-			Console.ReadLine();
+			    double miles, kilometers;
+            string temp;
+            const double MILES_FACTOR = 1.609344;
+            Console.Write("How many miles would you like to be converted to kilometers?");
+            temp = Console.ReadLine();
+            miles = Convert.ToDouble(temp);
+            kilometers = miles * MILES_FACTOR;
+            Console.WriteLine($"The conversion of the distance in miles you have entered to kilometers is {kilometers:F2}" );
+            Console.ReadLine();
 		}
 		static void Lab5Method()
 		{
