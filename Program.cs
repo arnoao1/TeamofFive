@@ -1,4 +1,7 @@
-﻿namespace TeamofFive.usb
+﻿using System.Threading;
+using System;
+
+namespace TeamofFive.usb
 {
     internal class teamproject
     {
@@ -42,15 +45,60 @@
 		}
 		static void Lab2Method()
 		{
+			int totalhours = 1;
+			Console.WriteLine("Please Input a Number (Input 387)");
+			totalhours = Convert.ToInt32(Console.ReadLine());
+			int days = totalhours / 24;
+			int hours = totalhours % 24;
+			Console.WriteLine($"Your total hours is {totalhours}. You have {days} days, and you have {hours} hours.");
 			Console.ReadLine();
 		}
 		static void Lab3Method()
 		{
-			Console.ReadLine();
-		}
+            int h, computer;
+            char user, coin;
+            string temp;
+            Console.WriteLine("Heads or Tails");
+            Console.WriteLine(" ");
+            Console.WriteLine("h for heads or t for tails");
+            temp = Console.ReadLine();
+            user = Convert.ToChar(temp);
+            Random random = new Random();
+            Thread.Sleep(200);
+            computer = random.Next(2);
+            if (computer == 0)
+            {
+                Console.WriteLine(" \nThe answer is heads");
+                coin = 'h';
+            }
+            else
+            {
+                Console.WriteLine(" \nThe answer is tails");
+                coin = 't';
+            }
+            if (user == coin)
+            {
+                Console.WriteLine(" \nYAY, you won!");
+            }
+            else
+            {
+                Console.WriteLine(" \nYou lose :(");
+            }
+            Console.WriteLine($"You wrote {user}, the answer was {coin}");
+            Console.ReadLine();
+            Console.ReadLine();
+        }
 		static void Lab4Method()
 		{
-			Console.ReadLine();
+			    double miles, kilometers;
+            string temp;
+            const double MILES_FACTOR = 1.609344;
+            Console.Write("How many miles would you like to be converted to kilometers?");
+            temp = Console.ReadLine();
+            miles = Convert.ToDouble(temp);
+            kilometers = miles * MILES_FACTOR;
+            Console.WriteLine($"The conversion of the distance in miles you have entered to kilometers is {kilometers:F2}" );
+            Console.ReadLine();
 		}
 		static void Lab5Method()
 		{
