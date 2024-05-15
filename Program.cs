@@ -42,6 +42,12 @@
 		}
 		static void Lab2Method()
 		{
+			int totalhours = 1;
+			Console.WriteLine("Please Input a Number (Input 387)");
+			totalhours = Convert.ToInt32(Console.ReadLine());
+			int days = totalhours / 24;
+			int hours = totalhours % 24;
+			Console.WriteLine($"Your total hours is {totalhours}. You have {days} days, and you have {hours} hours.");
 			Console.ReadLine();
 		}
 		static void Lab3Method()
