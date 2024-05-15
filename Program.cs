@@ -103,46 +103,46 @@ namespace TeamofFive.usb
 		static void Lab5Method()
 		{
 			string temp;
-    char player, computer = '\0';
-    int rock, paper, scissors;
-    int comp;
-    Random rand = new Random();
+            char player, computer = '\0';
+            int rock, paper, scissors;
+            int comp;
+            Random rand = new Random();
 
-    Console.WriteLine("Lets play Rock paper Scissors");
-    Thread.Sleep(1000);
-    Console.WriteLine("Please choose between rock, paper, scissors");
-    temp = Console.ReadLine();
-    player = Convert.ToChar(temp);
+            Console.WriteLine("Lets play Rock paper Scissors");
+            Thread.Sleep(1000);
+            Console.WriteLine("Please choose between rock, paper, scissors");
+            temp = Console.ReadLine();
+            player = Convert.ToChar(temp);
 
-    comp = rand.Next(3);
+            comp = rand.Next(3);
 
-    switch (comp)
-    {
-        case 0:
-            computer = 'R';
-            break;
-        case 1:
-            computer = 'P';
-            break;
-        case 2:
-            computer = 'S';
-            break;
-    }
+            switch (comp)
+            {
+                case 0:
+                    computer = 'R';
+                    break;
+                case 1:
+                    computer = 'P';
+                    break;
+                case 2:
+                    computer = 'S';
+                    break;
+            }
 
-    if (((player == 'R') && (computer == 'S')) || ((player == 'S') && (computer == 'P')) || ((player == 'P') && (computer == 'R')))
-    {
-        Console.WriteLine("Player won");
+            if (((player == 'R') && (computer == 'S')) || ((player == 'S') && (computer == 'P')) || ((player == 'P') && (computer == 'R')))
+            {
+                Console.WriteLine("Player won");
 
-    }
-    else if (player == computer)
-    {
-        Console.WriteLine("Its a Draw");
-    }
-    else
-    {
-        Console.WriteLine("Computer won");
-    }
-    Console.ReadLine();
+            }
+            else if (player == computer)
+            {
+                Console.WriteLine("Its a Draw");
+            }
+            else
+            {
+                Console.WriteLine("Computer won");
+            }
+            Console.ReadLine();
 		}
         
     }
