@@ -4,10 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Lab6Method()
-			
+            Lab1Method()
+			Lab2Method()
+			Lab3Method()
+			Lab4Method()
+			Lab5Method()
 		}
-		static void Lab6Method()
+		static void Lab1Method()
 		{
 			int Team1 = 0;
             int Team2 = 0;
@@ -36,6 +39,23 @@
                 Console.WriteLine("Draw!");
             }
             Thread.Sleep(10000);
-        }
+		}
+		static void Lab2Method()
+		{
+			Console.ReadLine();
+		}
+		static void Lab3Method()
+		{
+			Console.ReadLine();
+		}
+		static void Lab4Method()
+		{
+			Console.ReadLine();
+		}
+		static void Lab5Method()
+		{
+			Console.ReadLine();
+		}
+        
     }
 }
