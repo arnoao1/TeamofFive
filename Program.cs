@@ -1,4 +1,7 @@
-﻿namespace TeamofFive.usb
+﻿using System.Threading;
+using System;
+
+namespace TeamofFive.usb
 {
     internal class teamproject
     {
@@ -52,8 +55,39 @@
 		}
 		static void Lab3Method()
 		{
-			Console.ReadLine();
-		}
+            int h, computer;
+            char user, coin;
+            string temp;
+            Console.WriteLine("Heads or Tails");
+            Console.WriteLine(" ");
+            Console.WriteLine("h for heads or t for tails");
+            temp = Console.ReadLine();
+            user = Convert.ToChar(temp);
+            Random random = new Random();
+            Thread.Sleep(200);
+            computer = random.Next(2);
+            if (computer == 0)
+            {
+                Console.WriteLine(" \nThe answer is heads");
+                coin = 'h';
+            }
+            else
+            {
+                Console.WriteLine(" \nThe answer is tails");
+                coin = 't';
+            }
+            if (user == coin)
+            {
+                Console.WriteLine(" \nYAY, you won!");
+            }
+            else
+            {
+                Console.WriteLine(" \nYou lose :(");
+            }
+            Console.WriteLine($"You wrote {user}, the answer was {coin}");
+            Console.ReadLine();
+            Console.ReadLine();
+        }
 		static void Lab4Method()
 		{
 			    double miles, kilometers;
